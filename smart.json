@@ -1,0 +1,10 @@
+{
+    "name": "Mobi-Router",
+    "description": "Simple router for mobile displaying with sidebar",
+    "homepage": "https://github.com/Matheus90/mobi-router",
+    "author": "Matheus Simon, James Gillmore",
+    "version": "0.1.0",
+    "git": "https://github.com/Matheus90/mobi-router.git",
+    "packages": {
+    }
+}

@@ -1,0 +1,101 @@
+
+<template name="mobi_router">
+    <div id="mobi_router_background">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+        <div id="mobi_background"></div>
+        <div id="mobi_router">
+
+            {{>mobi_sidebar}}
+
+            <div id="mobi_main">
+                {{>mobi_header}}
+                {{>mobi_content}}
+            </div>
+
+        </div>
+    </div>
+</template>
+
+
+<template name="mobi_header">
+    <div id="mobi_header" class="unselectable">
+        <div id="mobi_sidebar_toggle" class="unselectable"><i class="fa fa-bars fa-2x"></i></div>
+        {{#isolate}}
+        {{#if MobiRouter.hasBackBtn}}
+            <div id="header_back_btn" class="header_btn">{{{MobiRouter.backBtn}}}</div>
+        {{/if}}
+        {{/isolate}}
+
+        <div id="mobi_page_title">
+        {{#isolate}}
+        {{{pageTitle}}}
+        {{/isolate}}
+        </div>
+
+        {{#isolate}}
+        {{#if MobiRouter.hasDoneBtn}}
+            <div id="header_done_btn" class="header_btn">{{{MobiRouter.doneBtn}}}</div>
+        {{/if}}
+        {{/isolate}}
+    </div>
+</template>
+
+
+<template name="mobi_sidebar" class="scrollable" >
+    <div id="mobi_sidebar" class="scrollable unselectable">
+        <div class="scroller">
+        {{#isolate}}
+        {{{sidebar}}}
+        {{/isolate}}
+        </div>
+    </div>
+</template>
+
+
+<template name="mobi_content">
+    <div id="mobi_content">
+        {{#if isSequence}}
+            <div id="sequence_slider_wrapper">
+                <div id="sequence_scroller" class="scroller">
+                    {{#isolate}}
+                    {{>sliding_page_wrapper}}
+                    {{/isolate}}
+                </div>
+            </div>
+        {{else}}
+            {{#isolate}}
+            {{>mobi_page_content MobiRouter.currentRoute}}
+            {{/isolate}}
+        {{/if}}
+    </div>
+</template>
+
+
+<template name="sliding_page_wrapper">
+    {{#each slides}}
+        {{#isolate}}
+        {{>mobi_page_content this}}
+        {{/isolate}}
+    {{/each}}
+</template>
+
+<template name="mobi_page_content">
+    <div id="page_iscroll_{{name}}" class="scrollable mobi_page">
+        <div class="scroller">
+            {{#isolate}}
+            {{{content}}}
+            {{/isolate}}
+        </div>
+    </div>
+</template>
+
+
+<template name="mobi_not_found">
+    <h2 class="mobi_message_text">The requested page not found.</h2>
+</template>
+
+
+<template name="mobi_not_permitted">
+    <h2 class="mobi_message_text">You are not permitted to see this page.</h2>
+</template>
