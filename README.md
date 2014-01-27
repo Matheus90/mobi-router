@@ -79,5 +79,5 @@ The basic idea was to create an "Iron Router"-like router for mobile devices wit
 stuff that can be passed from left to right (e.g. sign up procedure).
 
   
-**much more description comming soon...**
+**much more description coming soon...**
   
