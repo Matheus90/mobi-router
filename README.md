@@ -15,7 +15,7 @@ $ mrt add Mobi-Router
 
 1. There is a specific order while configuring Mobi-Router:
   - First, you specify the map:
-  ```js
+  ```javascript
   MobiRouter.map({
     'home': {
         path: '/:testOne/:abc/',
@@ -27,7 +27,7 @@ $ mrt add Mobi-Router
   });
   ```
   - Second, create sequence from routes if needed:
-  ```js
+  ```javascript
   MobiRouter.addSequence('signup', [
     {
         name: 'home',
@@ -37,7 +37,7 @@ $ mrt add Mobi-Router
   ]);
   ```
   - Third and last, configure the Mobi-Router settings:
-  ```js
+  ```javascript
   MobiRouter.configure({
     canISpeak: true,  //creates logs about it's own working into the console
     desktopWidth: 800,
@@ -52,11 +52,11 @@ $ mrt add Mobi-Router
   });
   ```
 2. The most simple way to change page is:
-  ```js
+  ```javascript
   MobiRouter.go('home', {testOne: 'cool'});
   ```
 3. To open a sequence at a specifiy slide, use it like this:
-  ```js
+  ```javascript
   MobiRouter.openSequence('signup', 2, {firstname: 'Matheus'});
   ```
   
