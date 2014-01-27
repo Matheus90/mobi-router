@@ -15,7 +15,7 @@ $ mrt add Mobi-Router
 
 1. There is a specific order while configuring Mobi-Router:
   - First, you specify the map:
-```javascript
+```js
 MobiRouter.map({
   'home': {
     path: '/:testOne/:abc/',
@@ -27,7 +27,7 @@ MobiRouter.map({
 });
 ```
   - Second, create sequence from routes if needed:
-```javascript
+```js
 MobiRouter.addSequence('signup', [
   {
       name: 'home',
