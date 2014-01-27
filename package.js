@@ -9,6 +9,7 @@ Package.on_use(function (api, where) {
         'lib/js/_touch.js',
         'lib/js/animation.js',
         'lib/js/easing.js',
+        'lib/js/fast_buttons.js',
         'lib/js/inheritance.js',
         'lib/js/iscroll.js',
         'lib/js/resizeable.js',
