@@ -1,5 +1,4 @@
 # Mobi-Router
-===========
 
 Simple router made for meteor apps designed specifically for mobile devices.
 
@@ -16,7 +15,7 @@ $ mrt add Mobi-Router
 
 1. There is a specific order while configuring Mobi-Router:
   - First, you specify the map:
-  ```javascript
+  ```js
   MobiRouter.map({
     'home': {
         path: '/:testOne/:abc/',
@@ -28,7 +27,7 @@ $ mrt add Mobi-Router
   });
   ```
   - Second, create sequence from routes if needed:
-  ```javascript
+  ```js
   MobiRouter.addSequence('signup', [
     {
         name: 'home',
@@ -38,7 +37,7 @@ $ mrt add Mobi-Router
   ]);
   ```
   - Third and last, configure the Mobi-Router settings:
-  ```javascript
+  ```js
   MobiRouter.configure({
     canISpeak: true,  //creates logs about it's own working into the console
     desktopWidth: 800,
@@ -51,6 +50,14 @@ $ mrt add Mobi-Router
     notFoundTitle: '404, Page not found',
     ...
   });
+  ```
+2. The most simple way to change page is:
+  ```js
+  MobiRouter.go('home', {testOne: 'cool'});
+  ```
+3. To open a sequence at a specifiy slide, use it like this:
+  ```js
+  MobiRouter.openSequence('signup', 2, {firstname: 'Matheus'});
   ```
   
 ## The Concept
