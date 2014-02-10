@@ -105,24 +105,27 @@ body.mobile-site #mobi_background {
     font-size: 16px;
     font-weight: bold;
     color: white;
-    height: 32px;
-    padding: 3px 10px;
+    height: 36px;
+    padding: 5px 12px;
     text-align: center;
-    margin: 5px;
-    background: rgba(100,170,255,0.4);
+    margin: 3px 5px;
+    background: #2886BB;
     border: 1px outset lightblue;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    -webkit-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.4), 0px -10px 10px -5px rgba(0,0,0,0.2) inset;
-    -moz-box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.4), 0px -10px 10px -5px rgba(0,0,0,0.2) inset;
-    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.4), 0px -10px 10px -5px rgba(0,0,0,0.2) inset;
+    -webkit-text-shadow: 0px 0px 1px black;
+    -moz-text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px 1px black;
+    -webkit-box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
+    box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
 }
 
 .header_btn:active {
-    -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3), 0px -10px 10px -5px rgba(0,0,0,0.2) inset;
-    -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3), 0px -10px 10px -5px rgba(0,0,0,0.2) inset;
-    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.3), 0px -10px 10px -5px rgba(0,0,0,0.2) inset;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 }
 
 #header_back_btn {

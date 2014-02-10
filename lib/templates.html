@@ -22,8 +22,8 @@
     <div id="mobi_header" class="unselectable">
         <div id="mobi_sidebar_toggle" class="unselectable"><i class="fa fa-bars fa-2x"></i></div>
         {{#isolate}}
-        {{#if MobiRouter.hasBackBtn}}
-            <div id="header_back_btn" class="header_btn">{{{MobiRouter.backBtn}}}</div>
+        {{#if hasBackBtn}}
+            <div id="header_back_btn" class="header_btn">{{{MobiRouter.backBtnText}}}</div>
         {{/if}}
         {{/isolate}}
 
@@ -34,8 +34,8 @@
         </div>
 
         {{#isolate}}
-        {{#if MobiRouter.hasDoneBtn}}
-            <div id="header_done_btn" class="header_btn">{{{MobiRouter.doneBtn}}}</div>
+        {{#if hasNextBtn}}
+            <div id="header_done_btn" class="header_btn">{{{MobiRouter.nextBtnText}}}</div>
         {{/if}}
         {{/isolate}}
     </div>
@@ -55,37 +55,25 @@
 
 <template name="mobi_content">
     <div id="mobi_content">
-        {{#if isSequence}}
-            <div id="sequence_slider_wrapper">
-                <div id="sequence_scroller" class="scroller">
-                    {{#isolate}}
-                    {{>sliding_page_wrapper}}
-                    {{/isolate}}
-                </div>
+        <div id="sequence_slider_wrapper">
+            <div id="sequence_scroller" class="scroller">
+                {{>sliding_page_wrapper}}
             </div>
-        {{else}}
-            {{#isolate}}
-            {{>mobi_page_content MobiRouter.currentRoute}}
-            {{/isolate}}
-        {{/if}}
+        </div>
     </div>
 </template>
 
 
 <template name="sliding_page_wrapper">
     {{#each slides}}
-        {{#isolate}}
-        {{>mobi_page_content this}}
-        {{/isolate}}
+        {{{renderSlide this}}}
     {{/each}}
 </template>
 
 <template name="mobi_page_content">
-    <div id="page_iscroll_{{name}}" class="scrollable mobi_page">
+    <div id="pos{{{position}}}_page_iscroll_{{name}}" class="scrollable mobi_page">
         <div class="scroller">
-            {{#isolate}}
             {{{content}}}
-            {{/isolate}}
         </div>
     </div>
 </template>

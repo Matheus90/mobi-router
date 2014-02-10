@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-    api.use(['templating', 'handlebars'], 'client');
+    api.use(['templating', 'handlebars', 'deps', 'session'], 'client');
 
     api.add_files([
         'lib/js/_touch.js',
