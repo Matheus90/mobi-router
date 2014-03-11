@@ -23,5 +23,5 @@ Package.on_use(function (api, where) {
     ], 'client');
 
     if (api.export)
-        api.export('MobiRouter');
+        api.export(['MobiRouter','MobiResizeable']);
 });
