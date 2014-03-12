@@ -9,7 +9,6 @@ Package.on_use(function (api, where) {
         'lib/js/_touch.js',
         'lib/js/animation.js',
         'lib/js/easing.js',
-        'lib/js/fast_buttons.js',
         'lib/js/inheritance.js',
         'lib/js/iscroll.js',
         'lib/js/resizeable.js',
@@ -17,7 +16,6 @@ Package.on_use(function (api, where) {
         'lib/mobi_route.js',
         'lib/mobi_router.css',
         'lib/mobi_router.js',
-        'lib/mobi_sequence.js',
         'lib/templates.html',
         'lib/templates.js'
     ], 'client');
