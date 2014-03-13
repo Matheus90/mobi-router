@@ -1,0 +1,68 @@
+
+<template name="mobi_tableview">
+    {{#each rows}}
+        {{#isLink this}}
+            {{> mobi_tableview_link this}}
+        {{else}}
+            {{> mobi_tableview_pressable this}}
+        {{/isLink}}
+    {{/each}}
+</template>
+
+
+<template name="isLink">
+    {{#if isLink type}}
+        {{> content}}
+    {{else}}
+        {{> elseContent}}
+    {{/if}}
+</template>
+
+
+<template name="isButton">
+    {{#if isButton type}}
+        {{> content}}
+    {{else}}
+        {{> elseContent}}
+    {{/if}}
+</template>
+
+
+<template name="mobi_tableview_link">
+    <div id="{{id}}" class="tableview-link {{classExtension}}">
+        {{#if icon}}<div class="icon" style="background-image: url('{{icon}}');"></div>{{/if}}
+        <div class="text-container">
+            <div class="title">{{{title}}}</div>
+            <div class="subtitle">{{{subTitle}}}</div>
+        </div>
+        <i class="arrow-right fa fa-chevron-right"></i>
+    </div>
+</template>
+
+
+<template name="mobi_tableview_pressable">
+    <div id="{{id}}" class="tableview-pressable {{classExtension}}">
+        {{#if icon}}<div class="icon" style="background-image: url('{{icon}}');"></div>{{/if}}
+        <div class="text-container">
+            <div class="title">{{{title}}}</div>
+            <div class="subtitle">{{{subTitle}}}</div>
+        </div>
+        <div class="btn-container">
+            {{#isButton this}}
+                {{#if isButton}}
+                    <div class="action-btn {{activityClass btnActive}}">{{{buttonText}}}</div>
+                {{else}}
+                    {{{replaceBtn}}}
+                {{/if}}
+            {{else}}
+                <div class="switcher {{activityClass btnActive}} {{switchState state}}">
+                    <div class="switch-slider">
+                        <div class="switch-slider-ontext">{{{onText}}}</div>
+                        <div class="switch-slider-inner"></div>
+                        <div class="switch-slider-offtext">{{{offText}}}</div>
+                    </div>
+                </div>
+            {{/isButton}}
+        </div>
+    </div>
+</template>
