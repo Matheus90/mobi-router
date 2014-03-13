@@ -3,18 +3,26 @@
     <div id="mobi_router_background">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-        <div id="mobi_background"></div>
-        <div id="mobi_router">
+        {{#if MobiRouter.loading}}
+            {{> mobi_loading}}
+        {{else}}
+            <div id="mobi_background"></div>
+            <div id="mobi_router">
 
-            {{> mobi_sidebar}}
+                {{> mobi_sidebar}}
 
-            <div id="mobi_main">
-                {{> mobi_header}}
-                {{> mobi_content}}
+                <div id="mobi_main">
+                    {{> mobi_header}}
+                    {{> mobi_content}}
+                </div>
+
             </div>
-
-        </div>
+        {{/if}}
     </div>
+</template>
+
+<template name="mobi_loading">
+    <div id="mobi_loading">{{> loading_template}}</div>
 </template>
 
 
@@ -58,9 +66,6 @@
 </template>
 
 
-<template name="sliding_page_wrapper">
-</template>
-
 <template name="mobi_page_content">
     <div id="pos{{position}}_page_iscroll_{{name}}" class="scrollable mobi_page {{classExtensions.page}}">
         <div class="scroller">
@@ -71,11 +76,13 @@
 
 
 <template name="mobi_not_found">
+    <h1 class="mobi_message_text">Error: 404</h1>
     <h2 class="mobi_message_text">The requested page not found.</h2>
 </template>
 
 
 <template name="mobi_not_permitted">
+    <h1 class="mobi_message_text">Error: 403</h1>
     <h2 class="mobi_message_text">You are not permitted to see this page.</h2>
 </template>
 

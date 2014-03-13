@@ -4,16 +4,13 @@
 }
 
 body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow: auto;
 }
 
-body.mobile-site {
-    height: 100%;
-    width: 100%;
-    overflow: hidden !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
 
 #mobi_background {
     display: none;
@@ -385,6 +382,7 @@ body.mobile-site #mobi_background {
     -webkit-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
     -moz-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
     box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
+    z-index: 12;
 }
 
 .tableview-pressable .btn-container .switcher .switch-slider {
