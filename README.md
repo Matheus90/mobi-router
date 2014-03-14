@@ -67,7 +67,7 @@ MobiRouter.map({
         path: '/',
         defaultTitle: 'Home',
         template: 'home',
-        type: 'SimplePage',
+        routeType: 'SimplePage',
         data: function(){ return {first: this.params.first, fffsss: this.params.second}; },
         classExtensions: {
             page: 'lightsteelblue-bg',
@@ -126,7 +126,7 @@ MobiRouter.configure({
 
 #### `.addViewTypes(types);`
 
-The is an opportunity to create custom templates to fit the routes into. You can set the **type** of the route e.g. **TableView** and it will create a page like **[this](http://mobi-router.meteor.com/animals)**. If you leave out the type attribute it will defaults to **SimplePage** that means the route will be rendered with it's own template.
+The is an opportunity to create custom templates to fit the routes into. You can set the **routeType** of the route e.g. **TableView** and it will create a page like **[this](http://mobi-router.meteor.com/animals)**. If you leave out the routeType attribute it will defaults to **SimplePage** that means the route will be rendered with it's own template.
 
 To create new view types you need to add them this way:
 
