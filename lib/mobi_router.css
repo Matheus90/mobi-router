@@ -33,6 +33,30 @@ body.mobile-site #mobi_background {
     background: black;
 }
 
+#mobi_loading {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: black;
+    z-index: 10000;
+}
+
+#mobi_loading_indicator {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('loading.gif');
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 #mobi_router {
     display: block;
     position: fixed;

@@ -3,26 +3,32 @@
     <div id="mobi_router_background">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-        {{#if MobiRouter.loading}}
-            {{> mobi_loading}}
-        {{else}}
-            <div id="mobi_background"></div>
-            <div id="mobi_router">
 
-                {{> mobi_sidebar}}
+        <div id="mobi_background"></div>
+        <div id="mobi_router">
+            {{#if MobiLoading}}
+                {{> mobi_loading}}
+            {{/if}}
 
-                <div id="mobi_main">
-                    {{> mobi_header}}
-                    {{> mobi_content}}
-                </div>
+            {{> mobi_sidebar}}
 
+            <div id="mobi_main">
+                {{> mobi_header}}
+                {{> mobi_content}}
             </div>
-        {{/if}}
+
+        </div>
     </div>
 </template>
 
 <template name="mobi_loading">
-    <div id="mobi_loading">{{> loading_template}}</div>
+    <div id="mobi_loading">
+        {{#if loading_template}}
+            {{> loading_template}}
+        {{else}}
+            <div id="mobi_loading_indicator"></div>
+        {{/if}}
+    </div>
 </template>
 
 
