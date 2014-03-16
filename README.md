@@ -54,6 +54,14 @@ Animates the content to move back to left.
 * **return**: no return
 
 
+#### `.setParams(params, route);`
+
+If you do not want to go to another page but change parameters of the current or any requested page, you can use this function.
+
+* **params(object)**: the parameteres you want to update
+* **route(MobiRoute)**: (deg.: current) the route which you want to update it's parameters
+* **return**: the refreshed route used by the function
+
 ### Configuration
 
 
