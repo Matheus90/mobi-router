@@ -1,0 +1,269 @@
+.tableview-sub {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid steelblue;
+}
+
+.tableview-link,
+.tableview-pressable{
+    display: block;
+    position: relative;
+    padding: 5px 20px 5px 5px;
+    min-height: 44px;
+    background: white;
+    color: black;
+    border-bottom: 1px solid steelblue;
+}
+
+.tableview-pressable{
+    padding: 5px 100px 5px 5px;
+}
+
+
+.tableview-sub .tableview-link:last-child,
+.tableview-sub .tableview-pressable:last-child {
+    border-bottom: 0px solid transparent;
+}
+
+.tableview-link {
+    cursor: pointer;
+}
+
+.tableview-link .icon,
+.tableview-pressable .icon{
+    display: inline-block;
+    vertical-align: top;
+    width: 48px;
+    height: 48px;
+    margin: 2px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tableview-link .text-container,
+.tableview-pressable .text-container{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+.tableview-link .title,
+.tableview-pressable .title{
+    margin-top: 12px;
+    margin-bottom: 14px;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 28px;
+}
+
+.tableview-link .subtitle,
+.tableview-pressable .subtitle{
+    margin-top: -18px;
+    display: block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 16px;
+    color: DimGrey;
+}
+
+.tableview-link .arrow-right{
+    position: absolute;
+    display: block;
+    color: DimGrey;
+    right: 10px;
+    top: 24px;
+}
+
+.tableview-pressable .btn-container{
+    position: absolute;
+    display: block;
+    color: DimGrey;
+    width: 97px;
+    height: 53px;
+    right: 5px;
+    top: 5px;
+}
+
+.tableview-pressable .btn-container .action-btn{
+    width: 80px;
+    height: 36px;
+    line-height: 36px;
+    color: white;
+    margin: 8px 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background: #3bb9ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3bb9ff 0%, #23709a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3bb9ff), color-stop(100%,#23709a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #3bb9ff 0%,#23709a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #3bb9ff 0%,#23709a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3bb9ff 0%,#23709a 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #3bb9ff 0%,#23709a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bb9ff', endColorstr='#23709a',GradientType=0 ); /* IE6-9 */
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-text-shadow: 0px 0px 1px black;
+    -moz-text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px 1px black;
+}
+
+.tableview-pressable .btn-container .switcher{
+    margin: 10px 4px;
+    position: relative;
+    color: white;
+    width: 82px;
+    height: 32px;
+    line-height: 32px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(240,240,240,1);
+    -webkit-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
+    -moz-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
+    z-index: 12;
+}
+
+.tableview-pressable .btn-container .switcher .switch-slider {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 30px;
+    line-height: 32px;
+}
+.tableview-pressable .btn-container .switcher.offState .switch-slider {
+    left: -50px;
+}
+
+.tableview-pressable .btn-container .switcher .switch-slider > *{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    padding: 0 3px;
+    text-align: center;
+    z-index: 10;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.tableview-pressable .btn-container .switcher:not(.disabled) .switch-slider .switch-slider-ontext,
+.tableview-pressable .btn-container .switcher:not(.disabled) .switch-slider .switch-slider-offtext{
+    margin: 0;
+    width: 80px;
+    height: 30px;
+    z-index: 10;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8) inset;
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8) inset;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8) inset;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tableview-pressable .btn-container .switcher:not(.disabled) .switch-slider .switch-slider-ontext{
+    padding-right: 30px;
+    color: white;
+    text-shadow: -1px -1px 1px dimgrey;
+}
+.tableview-pressable .btn-container .switcher:not(.disabled) .switch-slider .switch-slider-offtext{
+    padding-left: 30px;
+    color: dimgrey;
+    text-shadow: 1px 1px 1px white;
+}
+
+.tableview-pressable .btn-container .switcher:not(.disabled) .switch-slider .switch-slider-ontext {
+    background: #3bb9ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3bb9ff 0%, #23709a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3bb9ff), color-stop(100%,#23709a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #3bb9ff 0%,#23709a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #3bb9ff 0%,#23709a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3bb9ff 0%,#23709a 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #3bb9ff 0%,#23709a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bb9ff', endColorstr='#23709a',GradientType=0 ); /* IE6-9 */
+}
+.tableview-pressable .btn-container .switcher:not(.disabled) .switch-slider .switch-slider-offtext{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #a0a0a0; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fdfdfd 0%, #a0a0a0 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#a0a0a0)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fdfdfd 0%,#a0a0a0 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fdfdfd 0%,#a0a0a0 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fdfdfd 0%,#a0a0a0 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fdfdfd 0%,#a0a0a0 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#a0a0a0',GradientType=0 ); /* IE6-9 */
+}
+
+.tableview-pressable .btn-container .switcher:not(.disabled) .switch-slider .switch-slider-inner {
+    margin: 0 -34px;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(240,240,240,1);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8), 0px 0px 10px -2px rgba(0,0,0,0.8) inset;
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8), 0px 0px 10px -2px rgba(0,0,0,0.8) inset;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.8), 0px 0px 10px -2px rgba(0,0,0,0.8) inset;
+    z-index: 11;
+}
+
+.tableview-pressable .btn-container .action-btn:not(.disabled){
+    -webkit-box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
+    box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
+}
+
+.tableview-pressable .btn-container .disabled,
+.tableview-pressable .btn-container .disabled *{
+    background: lightgrey;
+}
+
+.tableview-pressable .btn-container .action-btn:not(.disabled):active  {
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+}
+
+.tableview-pressable .btn-container .switcher:not(.disabled),
+.tableview-pressable .btn-container .action-btn:not(.disabled) {
+    cursor: pointer;
+}
+
+.touched {
+    background: #A9E0FF; /* Old browsers */
+    background: -moz-linear-gradient(top,  #A9E0FF 0%, #00A5FF 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A9E0FF), color-stop(100%,#00A5FF)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #A9E0FF 0%,#00A5FF 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #A9E0FF 0%,#00A5FF 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #A9E0FF 0%,#00A5FF 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #A9E0FF 0%,#00A5FF 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A9E0FF', endColorstr='#00A5FF',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
+}
+
+.tableview-link .btn-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px 20px;
+}
+
+.tableview-link .action-btn .default-btn {
+  padding: 5px 10px;
+  background: #00A4FF;
+  coloe: #fff;
+}
