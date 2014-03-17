@@ -158,6 +158,39 @@ MobiRouter.setViewTypes({
 });
 ```
 
+### Custom views
+You can easily add custom views with `.addViewTypes`. Custom views are basically simple templates which are rendered with all the other data provided when defining a route in MobiRouter.map(). They provide infinite re-usability.  
+
+For now, mobi-router provide following custom views baked in:
+
+#### TableView
+It renders a list of rows on the screen like the most common interface of most mobile apps. There are various customization options to render the rows differently.
+
+A route can be converted to render a TableView by specifying `routeType: "TableView"`. A **TableView** require `rows` property of the route which represents the rows to render. See below
+
+* **rows**
+  It has to be an *array* of *objects*. Each object in the array represents a single row. Each row can have various customization options.
+  
+  * **type**
+    A row can be of basically two types: `link` and `button` which are further customizable.
+    * **link**
+      A link is a simple link row which performs some *action* (provided by *action* property of the row) when user click/touch it. *action* is usually used for navigation  
+      Link can have an option `linkBtn` property. If set to true, a button appears on the right end of row with `linkBtnText` as its text and `linkBtnClass` as its class, which performs action provided by `linkBtnAction`.  
+    * **button**
+      Simple row with a button at the right end. In this case row itself doesn't do any action, action is performed by the button only. [*TODO*: More docs]
+  * **linkBtn**: *Boolean*
+    Decide if a button will be shown in right end of row. Works only with *link* type row
+  * **linkBtnText**: *String*
+    Text to be shown in the button. It can also be html code. Works  only with *link* type row
+  * **linkBtnClass**: *String*
+    Class of the button. Useful if you want button to have bootstrap/foundation classes. Works  only with *link* type row
+  * **linkBtnAction**: *Function*
+    Function to be executed when button on *link* row is clicked
+
+!-----------------------------------!
+!-- *TODO*: *More Documentation*  --!
+!-----------------------------------!
+
 
 ### Other functions related to *MobiRouter* object
 
