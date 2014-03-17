@@ -26,9 +26,9 @@ Most common way to navigate to the **routeName** . It's possible to use differen
 
 Start new route stack: `MobiRouter.go('home', {first: 'blabla', second: '123'});`
 
-`routeName`: Name of the route 
-`params`: Parameters to be passed to the given route
-`pushToStack`: Whether to create a new stack or push to the present stack.
+* `routeName`: Name of the route 
+* `params`: Parameters to be passed to the given route
+* `pushToStack`: Whether to create a new stack or push to the present stack.
 
 When `pushToStack` is true, back button is automatically enabled. Text to show in Back button can be customized in settings.
 
@@ -53,26 +53,26 @@ MobiRouter.go('greeting', true)
 
 Animates the content to move back to left. It navigates to the previous slide in sequence if there is one.
 
-* **posToMove(int)**: (def.: 1) number of pages to move
-* **keepFollowings(bool)**: (def.: false) if set true, the stack remains the same, but paging animation fires
-* **return**: no return
+* `posToMove` (int): (def.: 1) number of pages to move
+* `keepFollowings` (bool): (def.: false) if set true, the stack remains the same, but paging animation fires
+* `return`: no return
 
 
 #### `.next(posToMove);`
 
 Animates the content to move back to left. Navigates to next slide in the stack if there is one.
 
-* **posToMove(int)**: (def.: 1) number of pages to move
-* **return**: no return
+* `posToMove` (int): (def.: 1) number of pages to move
+* `return`: no return
 
 
 #### `.setParams(params, route);`
 
 If you do not want to go to another page but change parameters of the current or any requested page, you can use this function.
 
-* **params(object)**: the parameteres you want to update
-* **route(MobiRoute)**: (deg.: current) the route which you want to update it's parameters
-* **return**: the refreshed route used by the function
+* `params` (object): the parameteres you want to update
+* `route` (MobiRoute): (deg.: current) the route which you want to update it's parameters
+* `return`: the refreshed route used by the function
 
 
 ### Configuration
@@ -141,13 +141,15 @@ MobiRouter.configure({
     sidebarTemplate: 'sidebar',
     notFoundTemplate: 'not_found',
     notFoundTitle: '404, Page not found',
+    loadingTemplate: true, // { false || true || 'loading' },
+    minLoadingTemplateTime: 3000, 
     scrollTime: 750,
 });
 ```
 
 #### `.addViewTypes(types);`
 
-The is an opportunity to create custom templates to fit the routes into. You can set the **routeType** of the route e.g. **TableView** and it will create a page like **[this](http://mobi-router.meteor.com/animals)**. If you leave out the routeType attribute it will defaults to **SimplePage** that means the route will be rendered with it's own template.
+The is an opportunity to create custom templates to fit the routes into. You can set the `routeType` of the route e.g. `TableView` and it will create a page like **[this](http://mobi-router.meteor.com/animals)**. If you leave out the routeType attribute it will defaults to `SimplePage` that means the route will be rendered with it's own template.
 
 To create new view types you need to add them this way:
 
@@ -206,12 +208,12 @@ Animates the content to move to the requested/current position. (paging animatio
 
 #### `.backBtnAction();`
 
-Action that will be fired when pressing the current **back** button in the header. Default: **MobiRouter.back()**;
+Action that will be fired when pressing the current `back` button in the header. Default: `MobiRouter.back();`
 
 
 #### `.backBtnText();`
 
-The text of the current **back** button in the header.
+The text of the current `back` button in the header.
 
 
 #### `.calculateSizes();`
@@ -223,36 +225,36 @@ Refreshes the stored data of Mobi-Router part sizes
 
 The template of the specified/current route.
 
-* **route(MobiRoute)**: (def.: **.currentRoute()**) the route what you need the title for
-* **return**: (Template)
+* `route(MobiRoute)`: (def.: `.currentRoute()`) the route what you need the title for
+* `return`: (Template)
 
 
 #### `.currentPosition();`
 
 Provide current route's position in the stack
 
-* **return**: (int)
+* `return`: (int)
 
 
 #### `.currentRoute();`
 
 Returns the current route object (MobiRoute object)
 
-* **return**: (MobiRoute)
+* `return`: (MobiRoute)
 
 
 #### `.currentRouteName();`
 
 The id/name of the current route.
 
-* **return**: (string)
+* `return`: (string)
 
 
 #### `.currentTemplate();`
 
 The name of template assigned to the current route.
 
-* **return**: (string)
+* `return`: (string)
 
 
 #### `.dep` *(Dependecy)*
@@ -264,43 +266,43 @@ Reactivity trigger used by Mobi-Router.
 
 Returns the data of route passed into the current template.
 
-* **return**: (object)
+* `return`: (object)
 
 
 #### `.getMap();`
 
-Provides the whole routemap saved from calling **.map()** function.
+Provides the whole routemap saved from calling `.map()` function.
 
-* **return**: (object)
+* `return`: (object)
 
 
 #### `.getPageTitle(route);`
 
-The title of specified/current route, calculated by the **.getData()** returned values.
+The title of specified/current route, calculated by the `.getData()` returned values.
 
-* **route(MobiRoute)**: (def.: **.currentRoute()**) the route which you need the title for
-* **return**: (html)
+* `route` (MobiRoute): (def.: `.currentRoute()`) the route which you need the title for
+* `return`: (html)
 
 
 #### `.getSlideStack();`
 
 The stack/array of currently queued routes.
 
-* **return**: (array)
+* `return`: (array)
 
 
 #### `.getSlideStackSize();`
 
 Size of routes stack.
 
-* **return**: (int)
+* `return`: (int)
 
 
 #### `.getUrl();`
 
 Generates pathname for url from the actual stack and route parameters.
 
-* **return**: (string)
+* `return`: (string)
 
 
 
