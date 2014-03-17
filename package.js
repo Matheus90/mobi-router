@@ -16,6 +16,7 @@ Package.on_use(function (api, where) {
         'lib/viewtypes/detailview.js',
         'lib/viewtypes/tableview.html',
         'lib/viewtypes/tableview.js',
+        'lib/viewtypes/tableview.css',
         'lib/helpers.js',
         'lib/mobi_route.js',
         'lib/mobi_router.css',
