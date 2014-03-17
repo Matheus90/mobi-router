@@ -42,7 +42,7 @@ body.mobile-site #mobi_background {
     left: 0;
     margin: 0;
     padding: 0;
-    background: black;
+    background: transparent;
     z-index: 10000;
 }
 
@@ -52,6 +52,7 @@ body.mobile-site #mobi_background {
     width: 100%;
     height: 100%;
     background-image: url('loading.gif');
+    background-color: rgba(0,0,0,0.4);
     background-size: 64px 64px;
     background-repeat: no-repeat;
     background-position: center;

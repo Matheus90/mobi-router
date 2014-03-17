@@ -13,7 +13,9 @@
             {{> mobi_sidebar}}
 
             <div id="mobi_main">
-                {{> mobi_header}}
+                {{#unless MobiLoading}}
+                    {{> mobi_header}}
+                {{/unless}}
                 {{> mobi_content}}
             </div>
 
