@@ -75,6 +75,20 @@ If you do not want to go to another page but change parameters of the current or
 * `return`: the refreshed route used by the function
 
 
+#### `.showSidebar();`
+
+With this you can show the sidebar (i.e. move the main window to the right)
+
+* `return`: (bool)true
+
+
+#### `.hideSidebar();`
+
+With this you can hide the sidebar (i.e. move the main window to the left)
+
+* `return`: (bool)true
+
+
 ### Configuration
 
 
@@ -147,7 +161,7 @@ MobiRouter.configure({
 });
 ```
 
-#### `.addViewTypes(types);`
+#### `.setViewTypes(types);`
 
 The is an opportunity to create custom templates to fit the routes into. You can set the `routeType` of the route e.g. `TableView` and it will create a page like **[this](http://mobi-router.meteor.com/animals)**. If you leave out the routeType attribute it will defaults to `SimplePage` that means the route will be rendered with it's own template.
 
@@ -200,9 +214,9 @@ A route can be converted to render a TableView by specifying `routeType: "TableV
 
 Animates the content to move to the requested/current position. (paging animation)
 
-* **pos(int)**: (def.: currentPosition()) requested position, starts with 0
-* **time(int)**: (def.: 750) animation duration in milliseconds
-* **return**: no return
+* `pos` (int): (def.: currentPosition()) requested position, starts with 0
+* `time` (int): (def.: 750) animation duration in milliseconds
+* `return`: no return
 
 
 
@@ -305,6 +319,107 @@ Generates pathname for url from the actual stack and route parameters.
 * `return`: (string)
 
 
+#### `.hasBackBtn();`
 
-**more description coming soon...**
+Wether the header has *back* button or not.
+
+* `return`: (bool)
+
+
+#### `.hasNextBtn();`
+
+Wether the header has *next* button or not.
+
+* `return`: (bool)
+
+
+#### `.initScrolls();`
+
+Initialize/refresh sidebar scroller and page scrollers.
+
+
+#### `.jumpToPosition(pos);`
+
+Jumps to the requested|current route without animation.
+
+* `pos` (int): (def.: currentPosition()) requested position, starts with 0
+
+
+#### `.loading();`
+
+It's true while the loading template is on the screen.
+
+* `return`: (bool)
+
+
+#### `.loadingTemplate();`
+
+The template used as load screen on site opening.
+
+* `return`: (Template)
+
+
+#### `.nextBtnAction();`
+
+The function called when `.next()` is triggered.
+
+* `return`: (function)
+
+
+#### `.nextBtnText();`
+
+Text shown on the actual *next* button in the header
+
+* `return`: (string)
+
+
+#### `.notFoundTemplate();`
+
+The template which is used when Mobi-Router can not find the requested page.
+
+* `return`: (Template)
+
+
+#### `.notFoundTitle();`
+
+The title shown when the requested page has not found.
+
+* `return`: (string)
+
+
+#### `.readUrl(url);
+
+Read out a sequence from the requested|current url.
+
+* `url` (string): (def.: actual url) the url you want to get the sequence out
+* `return`: (array)
+
+
+#### `.refreshSidebarScroll();`
+
+Manual trigger to refresh the sidebar's scroller.
+
+
+#### `.sidebar();`
+
+The sidebar template set by the configurator of site.
+
+* `return`: (Template)
+
+
+#### `.speak(message);`
+
+Centralized function to display logs of Mobi-Router.
+
+* `message` (string): the message you want to display in console
+
+
+#### `.storedRoutes();`
+
+Array of stored routes set with `.map()` function.
+
+* `return`: (array)
+* 
+
+**README.md style changes and technical updates are possible in future**
   
