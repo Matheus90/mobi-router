@@ -26,9 +26,9 @@ Most common way to navigate to the **routeName** . It's possible to use differen
 
 Start new route stack: `MobiRouter.go('home', {first: 'blabla', second: '123'});`
 
-`routeName`: Name of the route 
-`params`: Parameters to be passed to the given route
-`pushToStack`: Whether to create a new stack or push to the present stack.
+* `routeName`: Name of the route 
+* `params`: Parameters to be passed to the given route
+* `pushToStack`: Whether to create a new stack or push to the present stack.
 
 When `pushToStack` is true, back button is automatically enabled. Text to show in Back button can be customized in settings.
 
@@ -53,26 +53,40 @@ MobiRouter.go('greeting', true)
 
 Animates the content to move back to left. It navigates to the previous slide in sequence if there is one.
 
-* **posToMove(int)**: (def.: 1) number of pages to move
-* **keepFollowings(bool)**: (def.: false) if set true, the stack remains the same, but paging animation fires
-* **return**: no return
+* `posToMove` (int): (def.: 1) number of pages to move
+* `keepFollowings` (bool): (def.: false) if set true, the stack remains the same, but paging animation fires
+* `return`: no return
 
 
 #### `.next(posToMove);`
 
 Animates the content to move back to left. Navigates to next slide in the stack if there is one.
 
-* **posToMove(int)**: (def.: 1) number of pages to move
-* **return**: no return
+* `posToMove` (int): (def.: 1) number of pages to move
+* `return`: no return
 
 
 #### `.setParams(params, route);`
 
 If you do not want to go to another page but change parameters of the current or any requested page, you can use this function.
 
-* **params(object)**: the parameteres you want to update
-* **route(MobiRoute)**: (deg.: current) the route which you want to update it's parameters
-* **return**: the refreshed route used by the function
+* `params` (object): the parameteres you want to update
+* `route` (MobiRoute): (deg.: current) the route which you want to update it's parameters
+* `return`: the refreshed route used by the function
+
+
+#### `.showSidebar();`
+
+With this you can show the sidebar (i.e. move the main window to the right)
+
+* `return`: (bool)true
+
+
+#### `.hideSidebar();`
+
+With this you can hide the sidebar (i.e. move the main window to the left)
+
+* `return`: (bool)true
 
 
 ### Configuration
@@ -141,13 +155,15 @@ MobiRouter.configure({
     sidebarTemplate: 'sidebar',
     notFoundTemplate: 'not_found',
     notFoundTitle: '404, Page not found',
+    loadingTemplate: true, // { false || true || 'loading' },
+    minLoadingTemplateTime: 3000, 
     scrollTime: 750,
 });
 ```
 
-#### `.addViewTypes(types);`
+#### `.setViewTypes(types);`
 
-The is an opportunity to create custom templates to fit the routes into. You can set the **routeType** of the route e.g. **TableView** and it will create a page like **[this](http://mobi-router.meteor.com/animals)**. If you leave out the routeType attribute it will defaults to **SimplePage** that means the route will be rendered with it's own template.
+The is an opportunity to create custom templates to fit the routes into. You can set the `routeType` of the route e.g. `TableView` and it will create a page like **[this](http://mobi-router.meteor.com/animals)**. If you leave out the routeType attribute it will defaults to `SimplePage` that means the route will be rendered with it's own template.
 
 To create new view types you need to add them this way:
 
@@ -198,20 +214,20 @@ A route can be converted to render a TableView by specifying `routeType: "TableV
 
 Animates the content to move to the requested/current position. (paging animation)
 
-* **pos(int)**: (def.: currentPosition()) requested position, starts with 0
-* **time(int)**: (def.: 750) animation duration in milliseconds
-* **return**: no return
+* `pos` (int): (def.: currentPosition()) requested position, starts with 0
+* `time` (int): (def.: 750) animation duration in milliseconds
+* `return`: no return
 
 
 
 #### `.backBtnAction();`
 
-Action that will be fired when pressing the current **back** button in the header. Default: **MobiRouter.back()**;
+Action that will be fired when pressing the current `back` button in the header. Default: `MobiRouter.back();`
 
 
 #### `.backBtnText();`
 
-The text of the current **back** button in the header.
+The text of the current `back` button in the header.
 
 
 #### `.calculateSizes();`
@@ -223,36 +239,36 @@ Refreshes the stored data of Mobi-Router part sizes
 
 The template of the specified/current route.
 
-* **route(MobiRoute)**: (def.: **.currentRoute()**) the route what you need the title for
-* **return**: (Template)
+* `route(MobiRoute)`: (def.: `.currentRoute()`) the route what you need the title for
+* `return`: (Template)
 
 
 #### `.currentPosition();`
 
 Provide current route's position in the stack
 
-* **return**: (int)
+* `return`: (int)
 
 
 #### `.currentRoute();`
 
 Returns the current route object (MobiRoute object)
 
-* **return**: (MobiRoute)
+* `return`: (MobiRoute)
 
 
 #### `.currentRouteName();`
 
 The id/name of the current route.
 
-* **return**: (string)
+* `return`: (string)
 
 
 #### `.currentTemplate();`
 
 The name of template assigned to the current route.
 
-* **return**: (string)
+* `return`: (string)
 
 
 #### `.dep` *(Dependecy)*
@@ -264,45 +280,146 @@ Reactivity trigger used by Mobi-Router.
 
 Returns the data of route passed into the current template.
 
-* **return**: (object)
+* `return`: (object)
 
 
 #### `.getMap();`
 
-Provides the whole routemap saved from calling **.map()** function.
+Provides the whole routemap saved from calling `.map()` function.
 
-* **return**: (object)
+* `return`: (object)
 
 
 #### `.getPageTitle(route);`
 
-The title of specified/current route, calculated by the **.getData()** returned values.
+The title of specified/current route, calculated by the `.getData()` returned values.
 
-* **route(MobiRoute)**: (def.: **.currentRoute()**) the route which you need the title for
-* **return**: (html)
+* `route` (MobiRoute): (def.: `.currentRoute()`) the route which you need the title for
+* `return`: (html)
 
 
 #### `.getSlideStack();`
 
 The stack/array of currently queued routes.
 
-* **return**: (array)
+* `return`: (array)
 
 
 #### `.getSlideStackSize();`
 
 Size of routes stack.
 
-* **return**: (int)
+* `return`: (int)
 
 
 #### `.getUrl();`
 
 Generates pathname for url from the actual stack and route parameters.
 
-* **return**: (string)
+* `return`: (string)
 
 
+#### `.hasBackBtn();`
 
-**more description coming soon...**
+Wether the header has *back* button or not.
+
+* `return`: (bool)
+
+
+#### `.hasNextBtn();`
+
+Wether the header has *next* button or not.
+
+* `return`: (bool)
+
+
+#### `.initScrolls();`
+
+Initialize/refresh sidebar scroller and page scrollers.
+
+
+#### `.jumpToPosition(pos);`
+
+Jumps to the requested|current route without animation.
+
+* `pos` (int): (def.: currentPosition()) requested position, starts with 0
+
+
+#### `.loading();`
+
+It's true while the loading template is on the screen.
+
+* `return`: (bool)
+
+
+#### `.loadingTemplate();`
+
+The template used as load screen on site opening.
+
+* `return`: (Template)
+
+
+#### `.nextBtnAction();`
+
+The function called when `.next()` is triggered.
+
+* `return`: (function)
+
+
+#### `.nextBtnText();`
+
+Text shown on the actual *next* button in the header
+
+* `return`: (string)
+
+
+#### `.notFoundTemplate();`
+
+The template which is used when Mobi-Router can not find the requested page.
+
+* `return`: (Template)
+
+
+#### `.notFoundTitle();`
+
+The title shown when the requested page has not found.
+
+* `return`: (string)
+
+
+#### `.readUrl(url);
+
+Read out a sequence from the requested|current url.
+
+* `url` (string): (def.: actual url) the url you want to get the sequence out
+* `return`: (array)
+
+
+#### `.refreshSidebarScroll();`
+
+Manual trigger to refresh the sidebar's scroller.
+
+
+#### `.sidebar();`
+
+The sidebar template set by the configurator of site.
+
+* `return`: (Template)
+
+
+#### `.speak(message);`
+
+Centralized function to display logs of Mobi-Router.
+
+* `message` (string): the message you want to display in console
+
+
+#### `.storedRoutes();`
+
+Array of stored routes set with `.map()` function.
+
+* `return`: (array)
+* 
+
+**README.md style changes and technical updates are possible in future**
   
