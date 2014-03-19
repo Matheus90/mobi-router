@@ -15,6 +15,25 @@ The latest package is always on Atmosphere. To install latest package:
 $ mrt add Mobi-Router
 ```
 
+After it's installed, place the base template (the root of Mobi-Router) somewhere like this:
+
+```html
+<body>
+
+    ...
+    
+    <div id="page">
+        {{> mobi_router}}
+    </div>
+    
+    ...
+    
+</body>
+```
+
+Set the `desktopWidth` and `desktopHeight` in the `.configure(settings)` to fit in place like on the demo site does. (On demo site it's displayed as it would be the screen of the iPad graphics.)
+
+
 ## API
 
 ### Basic Navigation
