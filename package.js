@@ -9,6 +9,7 @@ Package.on_use(function (api, where) {
         'lib/js/_touch.js',
         'lib/js/animation.js',
         'lib/js/easing.js',
+        'lib/js/clickbuster.js',
         'lib/js/inheritance.js',
         'lib/js/iscroll.js',
         'lib/js/resizeable.js',
@@ -26,5 +27,5 @@ Package.on_use(function (api, where) {
     ], 'client');
 
     if (api.export)
-        api.export(['MobiRouter','MobiResizeable']);
+        api.export(['MobiRouter','MobiResizeable','ClickBuster']);
 });
