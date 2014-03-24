@@ -168,15 +168,22 @@ MobiRouter.configure({
     canISpeak: true,            // create logs in the console
     desktopWidth: 800,
     desktopHeight: 600,
-    headerHeight: 45,                
+    headerHeight: 45,    
+    sidebarMoveTime: 300,
+    sidebarMoveEasing: 'easeOutExpo',
     sidebarToggleBtn: 45,
     sidebarDefaultWidth: 300,
     sidebarTemplate: 'sidebar',
     notFoundTemplate: 'not_found',
     notFoundTitle: '404, Page not found',
+    defaultBackBtnText: 'Back',
+    defaultBackBtnAction: function(){ MobiRouter.back(); },
+    defaultNextBtnText: 'Next',
+    defaultNextBtnAction: function(){ MobiRouter.next(); },
     loadingTemplate: true, // { false || true || 'loading' },
     minLoadingTemplateTime: 3000, 
-    scrollTime: 750,
+    pageMoveTime: 600,
+    pageMoveEasing: 'easeInOutBack',
 });
 ```
 
