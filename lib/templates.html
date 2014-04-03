@@ -16,7 +16,14 @@
                 {{#unless MobiLoading}}
                     {{> mobi_header}}
                 {{/unless}}
+
                 {{> mobi_content}}
+
+                {{#unless MobiLoading}}
+                    {{#if isFooter}}
+                        {{> mobi_footer}}
+                    {{/if}}
+                {{/unless}}
             </div>
 
         </div>
@@ -51,6 +58,14 @@
     </div>
 </template>
 
+<template name="mobi_footer">
+    <div id="mobi_footer" class="scrollable unselectable {{MobiRouter.currentRoute.classExtensions.footer}}">
+        <div id="mobi_footer_scroller">
+            {{> footerContent}}
+        </div>
+    </div>
+</template>
+
 
 <template name="mobi_sidebar" class="scrollable" >
     <div id="mobi_sidebar" class="scrollable unselectable {{MobiRouter.currentRoute.classExtensions.sidebar}}">
@@ -75,9 +90,9 @@
 
 
 <template name="mobi_page_content">
-    <div id="pos{{position}}_page_iscroll_{{name}}" class="scrollable mobi_page {{classExtensions.page}}">
+    <div id="pos{{position}}_page_iscroll_{{name}}" class=" scrollable mobi_page {{classExtensions.page}}" style="{{preloadedCss preloaded}}">
         <div class="scroller">
-            {{> pageContent pageParams}}
+            {{> pageContent pageData}}
         </div>
     </div>
 </template>

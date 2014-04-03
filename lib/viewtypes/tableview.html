@@ -1,6 +1,6 @@
 
 <template name="mobi_tableview">
-    {{#each rows}}
+    {{#each _r.rows}}
         {{#isLink this}}
             {{> mobi_tableview_link this}}
         {{else}}
@@ -12,18 +12,18 @@
 
 <template name="isLink">
     {{#if isLink type}}
-        {{> content}}
+        {{> UI.contentBlock}}
     {{else}}
-        {{> elseContent}}
+        {{> UI.elseBlock}}
     {{/if}}
 </template>
 
 
 <template name="isButton">
     {{#if isButton type}}
-        {{> content}}
+        {{> UI.contentBlock}}
     {{else}}
-        {{> elseContent}}
+        {{> UI.elseBlock}}
     {{/if}}
 </template>
 
