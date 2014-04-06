@@ -33,6 +33,16 @@ body {
     background: black;
 }
 
+.mobi_full_black_background {
+    display: block;
+    position: fixed;
+    top: -450%;
+    left: -450%;
+    width: 1000%;
+    height: 1000%;
+    background: black;
+}
+
 #mobi_loading {
     display: block;
     position: absolute;
