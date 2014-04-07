@@ -12,7 +12,7 @@
 
             {{> mobi_sidebar}}
 
-            <div id="mobi_main">
+            <div id="mobi_main" class="{{MobiRouter.currentRoute.classExtensions.main}}">
                 {{#unless MobiLoading}}
                     {{> mobi_header}}
                 {{/unless}}
