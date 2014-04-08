@@ -120,7 +120,8 @@ body {
 
 #mobi_page_title {
     display: inline-block;
-    float: left;
+    position: relative;
+    vertical-align: top;
     height: 100%;
     padding: 0 5px;
     line-height: 45px;
