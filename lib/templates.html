@@ -3,9 +3,11 @@
     <div id="mobi_router_background" class="{{mobileClass}}">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
+        {{> mobi_alerts}}
 
         <div id="mobi_background"></div>
         <div id="mobi_router">
+
             {{#if MobiLoading}}
                 {{> mobi_loading}}
             {{/if}}
@@ -109,3 +111,26 @@
     <h2 class="mobi_message_text">You are not permitted to see this page.</h2>
 </template>
 
+
+<template name="mobi_alerts">
+    {{#each alerts}}
+        {{> mobi_alert_template}}
+    {{/each}}
+</template>
+
+<template name="mobi_alert_template">
+    <div class="mobi_alert_background {{classExtension}}">
+        <div class="mobi_alert_box">
+            <div class="mobi_alert_text">{{{message}}}</div>
+            <div class="mobi_alert_buttons_container">
+                {{#each buttons}}
+                    {{> mobi_alert_button this}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="mobi_alert_button">
+    <div class="mobi_alert_button {{classExtension}}">{{{text}}}</div>
+</template>

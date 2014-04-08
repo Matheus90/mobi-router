@@ -22,6 +22,10 @@ body {
     left: 0;
 }
 
+#mobi_router_background {
+    position: relative;
+    display: block;
+}
 
 #mobi_router_background.mobile-display #mobi_background {
     display: block;
@@ -320,4 +324,83 @@ body {
 .mobi_message_text {
     text-align: center;
     padding: 10px;
+}
+
+
+.mobi_alert_background {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999999;
+}
+
+.mobi_alert_box {
+    position: absolute;
+    overflow: hidden;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 400px;
+    max-width: 90%;
+    min-height: 100px;
+    color: black;
+    font-size: 20px;
+    padding: 0px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-bottom: 1px solid #c7c7c7;
+    -webkit-box-shadow: 0px 0px 40px 0px black;
+    -moz-box-shadow: 0px 0px 40px 0px black;
+    box-shadow: 0px 0px 40px 0px black;
+    background: #BBBBBB; /* Old browsers */
+    background: -moz-linear-gradient(top,  #BBBBBB 0%, #888888 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#BBBBBB), color-stop(100%,#888888)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #BBBBBB 0%,#888888 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #BBBBBB 0%,#888888 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #BBBBBB 0%,#888888 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #BBBBBB 0%,#888888 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BBBBBB', endColorstr='#888888',GradientType=0 ); /* IE6-9 */
+}
+
+.mobi_alert_text {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    border-bottom: 1px solid #c7c7c7;
+    text-align: center;
+    padding: 10px;
+}
+
+.mobi_alert_buttons_container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    min-height: 40px;
+    background: rgba(255,255,255,0.3);
+}
+
+.mobi_alert_button {
+    position: relative;
+    display: inline-block;
+    height: 44px;
+    line-height: 34px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #c7c7c7;
+    margin: 5px 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    background: #BBBBBB; /* Old browsers */
+    background: -moz-linear-gradient(top,  #BBBBBB 0%, #888888 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#BBBBBB), color-stop(100%,#888888)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #BBBBBB 0%,#888888 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #BBBBBB 0%,#888888 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #BBBBBB 0%,#888888 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #BBBBBB 0%,#888888 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#BBBBBB', endColorstr='#888888',GradientType=0 ); /* IE6-9 */
 }

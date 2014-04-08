@@ -119,6 +119,8 @@
 .tableview-pressable .btn-container .switcher{
     margin: 10px 4px;
     position: relative;
+    display: inline-block;
+    vertical-align: top;
     color: white;
     width: 82px;
     height: 32px;
@@ -132,6 +134,17 @@
     -moz-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
     box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.8);
     z-index: 12;
+}
+
+.tableview-pressable .btn-container .switcher-before-text,
+.tableview-pressable .btn-container .switcher-after-text {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 4px;
+    height: 32px;
+    line-height: 32px;
 }
 
 .tableview-pressable .btn-container .switcher .switch-slider {
@@ -225,9 +238,9 @@
     box-shadow: 0px 1px 6px -1px rgba(0,0,0,1);
 }
 
-.tableview-pressable .btn-container .disabled,
-.tableview-pressable .btn-container .disabled *{
-    background: lightgrey;
+.tableview-pressable .btn-container.disabled *,
+.tableview-pressable .btn-container .disabled * {
+    opacity: 0.7;
 }
 
 .tableview-pressable .btn-container .action-btn:not(.disabled):active  {

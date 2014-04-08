@@ -53,7 +53,7 @@
             <div class="title">{{{title}}}</div>
             <div class="subtitle">{{{subTitle}}}</div>
         </div>
-        <div class="btn-container">
+        <div class="btn-container {{activityClass btnActive}}">
             {{#isButton this}}
                 {{#if isButton}}
                     <div class="action-btn {{activityClass btnActive}}">{{{buttonText}}}</div>
@@ -61,13 +61,27 @@
                     {{{replaceBtn}}}
                 {{/if}}
             {{else}}
+                {{#if 0}}
+                <div class="switcher-before-text">{{{stateText state}}}</div>
+                {{/if}}
                 <div class="switcher {{activityClass btnActive}} {{switchState state}}">
                     <div class="switch-slider">
-                        <div class="switch-slider-ontext">{{{onText}}}</div>
+                        <div class="switch-slider-ontext">
+                            {{#unless stateText}}
+                                {{{onText}}}
+                            {{/unless}}
+                        </div>
                         <div class="switch-slider-inner"></div>
-                        <div class="switch-slider-offtext">{{{offText}}}</div>
+                        <div class="switch-slider-offtext">
+                            {{#unless stateText}}
+                            {{{offText}}}
+                            {{/unless}}
+                        </div>
                     </div>
                 </div>
+                {{#if 1}}
+                <div class="switcher-after-text">{{{stateText state}}}</div>
+                {{/if}}
             {{/isButton}}
         </div>
     </div>
