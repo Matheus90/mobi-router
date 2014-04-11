@@ -47,15 +47,15 @@
     <div id="mobi_header" class="unselectable {{MobiRouter.currentRoute.classExtensions.header}}">
         <div id="mobi_sidebar_toggle" class="unselectable"><i class="fa fa-bars fa-2x"></i></div>
         {{#if hasBackBtn}}
-            <div id="header_back_btn" class="header_btn">{{{backBtnText}}}</div>
+            <div id="header_back_btn" class="header_btn header_back_btn {{MobiRouter.currentRoute.buttons.backBtnClass}}">{{{backBtnText}}}</div>
         {{/if}}
 
-        <div id="mobi_page_title">
+        <div id="mobi_page_title" class="{{MobiRouter.currentRoute.titleClassExtension}}">
         {{{pageTitle}}}
         </div>
 
         {{#if hasNextBtn}}
-            <div id="header_done_btn" class="header_btn">{{{nextBtnText}}}</div>
+            <div id="header_done_btn" class="header_btn header_next_btn {{MobiRouter.currentRoute.buttons.nextBtnClass}}">{{{nextBtnText}}}</div>
         {{/if}}
     </div>
 </template>

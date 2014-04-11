@@ -32,8 +32,8 @@
     <div id="{{id}}" class="tableview-link {{classExtension}}">
         {{#if icon}}<div class="icon" style="background-image: url('{{icon}}');"></div>{{/if}}
         <div class="text-container">
-            <div class="title">{{{title}}}</div>
-            <div class="subtitle">{{{subTitle}}}</div>
+            {{#if title}}<div class="title">{{{title}}}</div>{{/if}}
+            {{#if subTitle}}<div class="subtitle">{{{subTitle}}}</div>{{/if}}
         </div>
         {{#if this.linkBtn}}
           <div class="btn-container">
@@ -50,8 +50,8 @@
     <div id="{{id}}" class="tableview-pressable {{classExtension}}">
         {{#if icon}}<div class="icon" style="background-image: url('{{icon}}');"></div>{{/if}}
         <div class="text-container">
-            <div class="title">{{{title}}}</div>
-            <div class="subtitle">{{{subTitle}}}</div>
+            {{#if title}}<div class="title">{{{title}}}</div>{{/if}}
+            {{#if subTitle}}<div class="subtitle">{{{subTitle}}}</div>{{/if}}
         </div>
         <div class="btn-container {{activityClass btnActive}}">
             {{#isButton this}}
