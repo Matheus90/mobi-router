@@ -6,7 +6,7 @@ Package.on_use(function (api, where) {
     api.use(['templating', 'handlebars', 'deps', 'session'], 'client');
 
     api.add_files([
-        'lib/js/_touch.js',
+        'lib/js/touch.js',
         'lib/js/animation.js',
         'lib/js/easing.js',
         'lib/js/clickbuster.js',
