@@ -32,7 +32,7 @@
     <div id="{{id}}" class="tableview-link {{classExtension}}">
         {{#if icon}}<div class="icon" style="background-image: url('{{icon}}');"></div>{{/if}}
         <div class="text-container">
-            {{#if title}}<div class="title">{{{title}}}</div>{{/if}}
+            <div class="title">{{{title}}}</div>
             {{#if subTitle}}<div class="subtitle">{{{subTitle}}}</div>{{/if}}
         </div>
         {{#if this.linkBtn}}
@@ -50,13 +50,13 @@
     <div id="{{id}}" class="tableview-pressable {{classExtension}}">
         {{#if icon}}<div class="icon" style="background-image: url('{{icon}}');"></div>{{/if}}
         <div class="text-container">
-            {{#if title}}<div class="title">{{{title}}}</div>{{/if}}
+            <div class="title">{{{title}}}</div>
             {{#if subTitle}}<div class="subtitle">{{{subTitle}}}</div>{{/if}}
         </div>
         <div class="btn-container {{activityClass btnActive}}">
             {{#isButton this}}
                 {{#if isButton}}
-                    <div class="action-btn {{activityClass btnActive}}">{{{buttonText}}}</div>
+                    <div class="action-btn {{actionBtnClass}} {{activityClass btnActive}}">{{{buttonText}}}</div>
                 {{else}}
                     {{{replaceBtn}}}
                 {{/if}}
@@ -64,7 +64,7 @@
                 {{#if 0}}
                 <div class="switcher-before-text">{{{stateText state}}}</div>
                 {{/if}}
-                <div class="switcher {{activityClass btnActive}} {{switchState state}}">
+                <div class="switcher  {{switcherClass}} {{activityClass btnActive}} {{switchState state}}">
                     <div class="switch-slider">
                         <div class="switch-slider-ontext">
                             {{#unless stateText}}
