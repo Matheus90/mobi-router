@@ -95,6 +95,7 @@ body {
 #mobi_sidebar {
     background: rgb(110,110,110);
     position: relative;
+    display: block !important;
     width: 200px;
     height: 100%;
     padding-right: 5px;
