@@ -1,5 +1,5 @@
 Package.describe({
-    summary: "Simple router for mobile displaying with sidebar"
+    summary: "Simple router made for meteor apps designed specifically for mobile devices"
 });
 
 Package.on_use(function (api, where) {

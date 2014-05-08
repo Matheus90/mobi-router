@@ -12,7 +12,7 @@ You can checkout the demo site here: http://mobi-router.meteor.com/
 The latest package is always on Atmosphere. To install latest package:
 
 ```sh
-$ mrt add Mobi-Router
+$ mrt add mobi-router
 ```
 
 After it's installed, place the base template (the root of Mobi-Router) somewhere like this:
