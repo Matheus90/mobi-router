@@ -94,7 +94,7 @@
 
 
 <template name="mobi_page_content">
-    <div id="pos{{position}}_page_iscroll_{{name}}" class=" scrollable mobi_page {{classExtensions.page}}" style="{{preloadedCss preloaded}}">
+    <div id="pos{{position}}_page_iscroll_{{name}}" class="{{scrollableClass}} scrollable mobi_page {{classExtensions.page}}" style="{{preloadedCss preloaded}}">
         <div class="scroller">
             {{> pageContent pageData}}
         </div>
