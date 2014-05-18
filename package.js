@@ -12,6 +12,7 @@ Package.on_use(function (api, where) {
         'lib/js/clickbuster.js',
         'lib/js/inheritance.js',
         'lib/js/iscroll.js',
+        //'lib/js/iscroll-5-probe.js',
         'lib/js/resizeable.js',
         'lib/viewtypes/detailview.html',
         'lib/viewtypes/detailview.js',

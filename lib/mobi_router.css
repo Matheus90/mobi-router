@@ -283,6 +283,7 @@ mobi_router.sidebar-opened #mobi_main{
 .scroller {
     overflow: hidden;
     min-height: 100%;
+    width: 100%;
 }
 
 #mobi_sidebar > * {
