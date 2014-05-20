@@ -247,9 +247,9 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.6);
     z-index: 10;
     /* default animation speed */
-    /*-webkit-transition: 0.6s ease-in-out;
-    -moz-transition: 0.6s ease-in-out;
-    -o-transition: 0.6s ease-in-out;*/
+    /*-webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;*/
 }
 
 mobi_router.sidebar-opened #mobi_main{
@@ -257,18 +257,17 @@ mobi_router.sidebar-opened #mobi_main{
     -ms-transform: translateX(200px); /* IE 9 */
     -webkit-transform: translateX(200px); /* Opera, Chrome, and Safari */
 }
-
+/*
 .mobi_page {
     float:left;
     vertical-align: top;
-    display: block;
+    display: inline-block;
     margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    /*overflow-x: hidden !important;*/
-}
+}*/
 
 .mobi_page > * {
     overflow: hidden;
@@ -277,7 +276,7 @@ mobi_router.sidebar-opened #mobi_main{
 .scrollable {
     height: 100%;
     overflow: hidden;
-    position:absolute;
+    position: relative;
 }
 
 .scroller {
@@ -325,10 +324,10 @@ mobi_router.sidebar-opened #mobi_main{
     position: relative;
     vertical-align: top;
     float: left;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
 }
 
 .mobi_message_text {

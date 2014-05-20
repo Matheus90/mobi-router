@@ -7,7 +7,8 @@ Package.on_use(function (api, where) {
 
     api.add_files([
         'lib/js/touch.js',
-        'lib/js/animation.js',
+        //'lib/js/animation.js',
+        'lib/js/animation2.js',
         'lib/js/easing.js',
         'lib/js/clickbuster.js',
         'lib/js/inheritance.js',
