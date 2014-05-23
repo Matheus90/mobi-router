@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-    api.use(['templating', 'handlebars', 'deps', 'session'], 'client');
+    api.use(['templating', 'handlebars', 'deps', 'session'], ['client', 'server']);
 
     api.add_files([
         'lib/js/touch.js',
@@ -28,6 +28,10 @@ Package.on_use(function (api, where) {
         'lib/templates.js'
     ], 'client');
 
+    api.add_files([
+        'lib/js/slog.js'
+    ], ['client', 'server']);
+
     if (api.export)
-        api.export(['MobiRouter','MobiResizeable','ClickBuster']);
+        api.export(['MobiRouter','MobiResizeable','ClickBuster', 'slog']);
 });
