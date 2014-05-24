@@ -9,6 +9,7 @@
         <div id="mobi_background"></div>
         <div id="mobi_router">
             {{> mobi_alerts}}
+            {{> mobi_popup_select}}
 
             {{#if MobiLoading}}
                 {{> mobi_loading}}
@@ -135,4 +136,42 @@
 
 <template name="mobi_alert_button">
     <div class="mobi_alert_button {{classExtension}}">{{{text}}}</div>
+</template>
+
+
+<template name="mobi_popup_select">
+    {{#each selects}}
+        {{> mobi_popup_select_template}}
+    {{/each}}
+</template>
+
+<template name="mobi_popup_select_template">
+    <div id="mobi_popup_select_{{id}}" class="mobi_popup_select_background  unselectable {{classExtension}}">
+        <div class="mobi_popup_select_box {{closeBtnClass}}">
+            {{#if closeBtn}}
+            <div class="mobi_popup_select_close">
+                {{#if closeBtnHTML}}
+                    {{{closeBtnHTML}}}
+                {{else}}
+                    <i class="fa fa-times"></i>
+                {{/if}}
+            </div>
+            {{/if}}
+            <div class="mobi_popup_select_label">{{{label}}}</div>
+            <div id="popup-select-{{id}}" class="mobi_popup_select_options" style="{{calculatedStyle settings}}">
+                <div class="scroller">
+                {{#each options}}
+                    {{> mobi_popup_select_option this}}
+                {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="mobi_popup_select_option">
+    <div class="mobi_popup_select_option">
+        <div class="option-title">{{{label}}}</div>
+        <div class="option-confirm">{{#if selected}}<i class="fa fa-check"></i>{{/if}}</div>
+    </div>
 </template>
