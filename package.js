@@ -35,5 +35,5 @@ Package.on_use(function (api, where) {
 
 
     if (api.export)
-        api.export(['MobiRouter','MobiResizeable','ClickBuster', 'slog']);
+        api.export(['MobiRouter','MobiResizeable','ClickBuster','slog','EV']);
 });
