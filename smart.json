@@ -3,6 +3,6 @@
     "description": "Simple router made for meteor apps designed specifically for mobile devices.",
     "homepage": "https://github.com/Matheus90/mobi-router",
     "author": "Matheus Simon <90.matheus@gmail.com>; James Gillmore <james@faceyspacey.com>",
-    "version": "0.6.38",
+    "version": "0.6.40",
     "git": "https://github.com/Matheus90/mobi-router.git"
 }
