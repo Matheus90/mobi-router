@@ -2,3 +2,5 @@
 .npm
 .build*
 .idea*
+packages/*
+smart.lock
