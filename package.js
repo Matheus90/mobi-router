@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Simple router made for meteor apps designed specifically for mobile devices",
-  "version": "0.6.57",
+  "version": "0.6.62",
   "git": "https://github.com/Matheus90/mobi-router.git",
   "name": "matheus90:mobi-router"
 });
